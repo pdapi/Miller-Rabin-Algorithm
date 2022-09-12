@@ -1,0 +1,42 @@
+## Devoir Maison Cryptographie - Test Miller Rabin
+
+# 0
+Notre programme utilise la bibliothèque gmpy2 il est donc nécessaire de l'installer au préalable.
+"pip gmpy2" -> https://pypi.org/project/gmpy2/#files
+
+
+# 1 Les Tests
+Nous avons décidé de laisser nos fichiers de tests afin de pouvoir être relancés si besoin.
+Voici les différentes commandes à effectuer : 
+
+    - si l'on souhaite tester la fonction de décomposition avec des valeurs rentrées manuellement
+        -> python3 tests/test_comp.py 
+
+    - si l'on souhaite tester la fonction de décomposition avec 10 000 valeurs  
+        -> python3 tests/test_cmp_10000.py
+
+    - si l'on souhaite tester la fonction d'exponentiation modulaire avec 10 000 valeurs
+        -> python3 tests/test_pow_10000.py
+
+    - il y'a aussi à disposition les tests sur l'aléatoire cryptographique et sur la bibliothèque gmpy
+
+    - enfin le fichier test_miller.py qui comprend tous les derniers tests de l'algorithme de Miller Rabin
+ainsi que les tests de la fonction d'évaluation. (python3 tests/test_miller.py)
+        -> le fichier comprend un main présenté comme ceci : 
+            def main():
+                test_mill()
+                #test_eval()
+                #moy_100()
+
+        -> Il suffit donc décomenter la ligne qui nous intéresse :
+            -> si l'on souhaite effectuer le test sur les trois nombres fournis dans la question 6 :
+                -> test_mill()
+
+            -> si l'on souhaite effectuer le test de la fonction d'évaluation sur une seule itération :
+                -> test_eval()
+
+            -> si l'on souhaite effectuer 100 répétitions de la fonction d'évaluation et calculer la moyenne :
+                -> moy_100()
+                
+# 2 Le test de Miller Rabin
+	-> Le test et toutes les fonctions nécessaires qui ont été implémentées sont situées dans le ficher : miller_rabin.py
